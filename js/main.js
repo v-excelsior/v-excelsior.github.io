@@ -3,7 +3,6 @@ var makeItRain = function () {
     var increment = 0;
     var drops = "";
     var backDrops = "";
-
     while (increment < 100) {
         var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
         var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
@@ -14,8 +13,14 @@ var makeItRain = function () {
     $('.rain.front-row').append(drops);
     $('.rain.back-row').append(backDrops);
 }
-
 makeItRain();
 
-var audio = document.getElementById("rain_audio");
+const btn = document.querySelector(".rain_button")
+const audio = document.querySelector(".rain_audio");
 audio.volume = 0.2;
+
+btn.addEventListener('click', ()=>{
+    btn.classList.toggle("paused")
+    btn.classList.contains("paused") ? audio.play() : audio.pause()
+})  
+
