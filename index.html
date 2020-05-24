@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
     <title>Portfolio</title>
 </head>
-<body>
-    <a href="https://vakyla98.github.io/TodoVue/dist/#/dist">My SPA TodoList</a>
-    <a href="https://vakyla98.github.io/Minimal/">Markup with some JS,Gulp,SCSS,Yarn and SVG sprites</a>
-    <a href="https://vakyla98.github.io/Horses-3">My first responcise markup</a> 
+
+<body class="back-row-toggle splat-toggle">
+    <audio src="rain.mp3" autoplay loop preload id="rain_audio"></audio>
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
+
+    <div class='container'>
+        <ul class='link-list'>
+            <li><a href="https://vakyla98.github.io/TodoVue/dist/#/dist">My SPA TodoList</a></li>
+            <li><a href="https://vakyla98.github.io/Minimal/">Markup with some JS,Gulp,SCSS using Yarn</a></li>
+            <li><a href="https://vakyla98.github.io/Horses-3">My first responcise markup</a></li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
+
+
 </html>
