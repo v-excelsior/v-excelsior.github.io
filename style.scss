@@ -1,34 +1,82 @@
-@import "rain.scss";
+@import "_rain.scss";
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 html {
-    cursor: url(cursor.cur), auto;
+  cursor: url(cursor.cur), auto;
+  font-family: "Roboto", sans-serif;
 }
 
+.button {
+  position: absolute;
+  z-index: 5;
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  top: 20px;
+  left: 20px;
+  height: 40px;
+  outline: none;
+  cursor: url(cur-pointer.cur), auto;
+  border-color: transparent transparent transparent orange;
+  transition: 0.3s;
+  border-style: solid;
+  border-width: 20px 0 20px 40px;
+  &.paused {
+    border-style: double;
+    border-width: 0px 0 0px 40px;
+  }
+  &:hover {
+    border-color: transparent transparent transparent
+      darken($color: orange, $amount: 20%);
+  }
+}
 .container {
-    z-index: 9;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  z-index: 5;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .link-list {
-    text-align: center;
-    list-style: none;
-    display: flex;
-    height: 50vh;
-    flex-direction: column;
-    justify-content: space-between;
-    a {
-        cursor: url(cur-pointer.cur), auto;
-        font-family: "Lucida Console", Courier, monospace;
-        font-size: 20px;
-        color: gray;
-        &:hover {
-            color: darken(gray, $amount: 20%);
-            transition: color 0.2s ease-in-out;
-        }
+  text-align: center;
+  list-style: none;
+  display: flex;
+  height: 70vh;
+
+  flex-direction: column;
+  justify-content: space-between;
+  a {
+    cursor: url(cur-pointer.cur), auto;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    color: gray;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: orange;
+      transform-origin: center;
+      transform: scale(1.05);
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .container .link-list a {
+    font-size: 18px;
+  }
+  .button {
+    top: 20px;
+    left: 20px;
+    height: 26px;
+    border-width: 13px 0 13px 26px;
+    &.paused {
+      border-style: double;
+      border-width: 0px 0 0px 26px;
+    }
+  }
 }

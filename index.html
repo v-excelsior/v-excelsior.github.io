@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='style.css'>
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
-</head>
+  </head>
 
-<body class="back-row-toggle splat-toggle">
-    <iframe src="rain.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-    </iframe> 
-    <div class="rain front-row"></div>
-    <div class="rain back-row"></div>
+  <body class="thunder">
+    <audio id="rain_audio">
+      <source src="rain.mp3" type="audio/mp3" />
+    </audio>
+    <button class="button"></button>
+    <canvas id="canvas1"></canvas>
+    <canvas id="canvas2"></canvas>
+    <canvas id="canvas3"></canvas>
 
-    <div class='container'>
-        <ul class='link-list'>
-            <li><a href="https://vakyla98.github.io/TodoVue/dist/#/dist">My SPA TodoList</a></li>
-            <li><a href="https://vakyla98.github.io/Minimal/">Markup with some JS,Gulp,SCSS using Yarn</a></li>
-            <li><a href="https://vakyla98.github.io/Horses-3">My first responcise markup</a></li>
-        </ul>
+    <div class="container">
+      <ul class="link-list">
+        <li>
+          <a href="https://vakyla98.github.io/Rick-And-Morty-DB/dist"
+            >SPA Characters DB(Vue)</a
+          >
+        </li>
+        <li>
+          <a href="https://vakyla98.github.io/TodoVue/dist"
+            >SPA TodoList(Vue)</a
+          >
+        </li>
+        <li>
+          <a href="https://vakyla98.github.io/Minimal"
+            >Markup with some JS,Gulp,SCSS using Yarn</a
+          >
+        </li>
+        <li>
+          <a href="https://vakyla98.github.io/Horses"
+            >My first responcise markup</a
+          >
+        </li>
+      </ul>
     </div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="main.js"></script>
-</body>
-
-
-
+  </body>
 </html>
