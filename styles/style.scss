@@ -4,7 +4,7 @@
   margin: 0;
 }
 html {
-  cursor: url(cursor.cur), auto;
+  cursor: url(../assest/cursor.cur), auto;
   font-family: "Roboto", sans-serif;
 }
 
@@ -19,7 +19,7 @@ html {
   left: 20px;
   height: 40px;
   outline: none;
-  cursor: url(cur-pointer.cur), auto;
+  cursor: url(../assest/cur-pointer.cur), auto;
   border-color: transparent transparent transparent orange;
   transition: 0.3s;
   border-style: solid;
@@ -50,7 +50,7 @@ html {
   flex-direction: column;
   justify-content: space-between;
   a {
-    cursor: url(cur-pointer.cur), auto;
+    cursor: url(../assest/cur-pointer.cur), auto;
     display: block;
     text-decoration: none;
     font-size: 25px;
