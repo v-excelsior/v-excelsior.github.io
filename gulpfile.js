@@ -4,7 +4,7 @@ let gulp = require("gulp"),
 
 gulp.task("sass", function () {
   return gulp
-    .src("./**/*.scss")
+    .src("./styles/**/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
@@ -16,7 +16,7 @@ gulp.task("watchAll", function () {
       baseDir: "./",
     },
   });
-  gulp.watch("./**/*.scss", gulp.series("sass"));
+  gulp.watch("./styles/**/*.scss", gulp.series("sass"));
   gulp.watch("./**/*.html").on("change", browserSync.reload);
 });
 
